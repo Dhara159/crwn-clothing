@@ -1,16 +1,16 @@
 import ShopActionTypes from './shop.types';
 import { firestore, convertCollectionsSnapshotToMap } from './../../firebase/firebase.utils'
 
-const fetchCollectionsStart = () => ({
+export const fetchCollectionsStart = () => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_START
 });
 
-const fetchCollectionsSuccess = collectionsMap => ({
+export const fetchCollectionsSuccess = collectionsMap => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_SUCCESS,
   payload: collectionsMap
 });
 
-const fetchCollectionsFailure = errorMessage => ({
+export const fetchCollectionsFailure = errorMessage => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_FAILURE,
   payload: errorMessage
 });
@@ -37,7 +37,7 @@ export const fetchCollectionsStartAsync = () => {
     // fetch('https://firestore.googleapis.com/v1/projects/crwn-db/databases/(default)/documents')
     //   .then(Response => Response.json())
     //   .then(collections => console.log(collections));
-    
+
   };
 };
 
