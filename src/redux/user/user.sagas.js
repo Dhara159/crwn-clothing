@@ -3,7 +3,7 @@ import { takeLatest, put, all, call } from 'redux-saga/effects';
 import UserActionTypes from './user.types';
 
 import { auth, googleProvider, createUserProfileDocument, getCurrentUser } from './../../firebase/firebase.utils';
-import { signInFailure, signInSuccess, signOutFailure, signOutSuccess, signUpFailure, signUpSuccess } from './user.actions';
+import { signInFailure, signInSuccess, signOutFailure, signOutSuccess, signUpFailure } from './user.actions';
 
 export function* signInWithGoogle() {
   try {
